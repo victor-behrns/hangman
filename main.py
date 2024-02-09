@@ -4,8 +4,8 @@ from mainhelper import anonymiserer
 print("hello")
 
 # må finne et ord som brukeren skal gjette
-ordliste = ("chamber", "omen", "skye")
-ord_index = randint(0, 2)
+ordliste = ("chamber", "omen", "skye", "jett", "neon", "iso", "harbor", "killjoy", "raze", "cypher", "viper", "brimstone", "sage", "phoenix", "yoru")
+ord_index = randint(0, 14)
 ord = ordliste[ord_index]
 
 # la brukeren gjette bokstaver til han har fullført ordet
@@ -15,7 +15,9 @@ feil_bokstaver = []
 riktige_bokstaver = []
 antall_liv = 5
 while True:
-    print(antall_liv)
+    if antall_liv <= 0:
+        print("Game Over")
+        break
     bokstav = input("Gjett en bokstav")
     if bokstav.lower() == ord:
         print("Du har gjettet riktig, yaaaay")
@@ -32,9 +34,11 @@ while True:
              print (anonymiserer(ord, riktige_bokstaver))
     else:
         feil_bokstaver.append(bokstav)
-        print("feil lol")
-        print (anonymiserer(ord, riktige_bokstaver))
         antall_liv -= 1
+        print("feil, du har " + str(antall_liv) + " liv igjen.")
+        print (anonymiserer(ord, riktige_bokstaver))
+        
+
         
 
 
