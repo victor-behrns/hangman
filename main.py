@@ -4,8 +4,8 @@ from mainhelper import anonymiserer
 print("hello")
 
 # må finne et ord som brukeren skal gjette
-ordliste = ("chamber", "omen", "skye", "jett", "neon", "iso", "harbor", "killjoy", "raze", "cypher", "viper", "brimstone", "sage", "phoenix", "yoru")
-ord_index = randint(0, 14)
+ordliste = ("deadlock", "iso", "gekko", "harbor", "fade", "neon", "chamber", "kayo", "astra", "yoru", "skye", "raze", "jett", "omen", "breach", "killjoy", "reyna", "cypher", "viper", "sova", "sage", "phoenix", "brimstone")
+ord_index = randint(0, 22)
 ord = ordliste[ord_index]
 
 # la brukeren gjette bokstaver til han har fullført ordet
@@ -37,10 +37,6 @@ while True:
         antall_liv -= 1
         print("feil, du har " + str(antall_liv) + " liv igjen.")
         print (anonymiserer(ord, riktige_bokstaver))
-        
-
-        
-
 
 # si ifra om bokstaven er riktig eller feil
 
